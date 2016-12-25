@@ -25,15 +25,12 @@ float f = 2.3F;
 
 
 ##java 访问修饰符
-访问权限   类   包  子类  其他包
-
-public     ∨   ∨   ∨     ∨
-
-protect    ∨   ∨   ∨     ×
-
-default    ∨   ∨   ×     ×
-
-private    ∨   ×   ×     ×
+|   访问权限    |   类    |   包  |   子类  |   其他包  |
+| :--------:|:---------:|:---------:|:---------:|:---------:| 
+| public    |   Y   |   Y   |   Y   |   Y   |
+| protect   |   Y   |   Y   |   Y   |   X   |
+| default   |   Y   |   Y   |   X   |   X   |
+| private   |   Y   |   X   |   X   |   X   |
 
 
 ##正则表达式
