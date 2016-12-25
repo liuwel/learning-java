@@ -21,11 +21,19 @@ long l = 33342L;
 float f = 2.3F;
 ```
 
-#### int类型自动装箱 byte值范围之内的对象 是被jdk缓存起来的 所以 byte范围内打封装对象是同一个
+#### int类型自动装箱 byte值范围之内的对象 是被jvm缓存起来的 所以 byte范围内打封装对象是同一个
 
 
 ##java 访问修饰符
+访问权限   类   包  子类  其他包
 
+public     ∨   ∨   ∨     ∨
+
+protect    ∨   ∨   ∨     ×
+
+default    ∨   ∨   ×     ×
+
+private    ∨   ×   ×     ×
 
 
 ##正则表达式
