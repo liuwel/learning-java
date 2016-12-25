@@ -12,14 +12,19 @@
 |   char   |   8   |   0.0   |java.lang.Character|
 |   boolean   |   1/8   |   false   |java.lang.Boolean|
 
-### 整型默认是int 浮点默认是 double
+#### 整型默认类型是int 浮点默认类型是 double
 ```java
-// 给long类型数据赋值格式
+// 给long类型数据赋值格式 
 long l = 33342L;
+
 // 给float类型赋值格式
 float f = 2.3F;
 ```
 
+#### int类型自动装箱 byte值范围之内的对象 是被jdk缓存起来的 所以 byte范围内打封装对象是同一个
+
+
+##java 访问修饰符
 
 
 
