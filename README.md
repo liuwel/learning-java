@@ -62,7 +62,7 @@ int[] i = new int[]{1,2,3};
     >  如：int a = 10; byte b = 3; byte c = (byte) (a + b);
     (不要随意的使用强制类型转换，会导致精度丢失。)
 
-###整型默认类型是int 浮点默认类型是 double
+整型默认类型是int 浮点默认类型是 double
 ```java
 // 给long类型数据赋值格式 
 long l = 33342L;
@@ -77,16 +77,16 @@ float f = 2.3F;
 数组可以存储任何类型的数据，包括对象类型，基础类型和引用类型都可以通过数组存储，但是数组内存储的元素类型必须一致。
 数组的最大的缺点是，一旦定义，元素固定。
 
-####定义和初始化
+定义和初始化
 ```java
 // 动态初始化 
 int[] a = new int[4]; // 定义一个长度是4 类型是int的数组(推荐使用的写法)
 int b[] = new int[3]; // 定义一个长度是3 类型是int的数组
 // 静态初始化
 int[] c = new int[]{1, 2, 3, 4, 5};
-int[] d = {1, 2, 3};(推荐使用的写法)
+int[] d = {1, 2, 3}; //(推荐使用的写法)
 ```
-####访问
+访问
 数组是通过索引访问的 (索引只可以是整型)
 通过length属性可以获取到数组的长度
 ```java
@@ -172,30 +172,30 @@ System.out.println(Arrays.toString(c));
 ```
 ------
 ##包
-
-####概念
 > 包就是文件夹，一个文件夹，就是一个包。
 > 定义在一个文件夹中的n个文件，都是不需要引入直接使用的，因为他们都在同一个包中。
 作用：对类进行管理。
 
-####管理方案
+####包管理方案
 * 按照功能分。如：增加，删除，修改，查询分成包来管理。如：cn.itcast.add, cn.itcast.delete…
 * 按照模板分(推荐)。如：老师的功能放一个包，学生的功能放一个包。如：cn.itcast.teacher, cn.itcast.stdunt
 * 以上两种方案结合使用。先按模块分，再按功能分。
+
 ####包的定义
-> 使用package关键字。多级包用“.”来分开。如：cn.itcast.teacher => cn/itcast/teacher
+* 使用package关键字。多级包用“.”来分开。如：cn.itcast.teacher => cn/itcast/teacher
+
 ####包的注意事项
 * package语句必须放在可执行代码的第一行。
 * 一个类中只能定义一个包名。也就是说。一个类中，只能使用一次package语句。同php的namespace一样。
 * 如果类不用package声明，则表示无包名。
+
 ####导入包
-> 使用import关键字。格式：import 包名。
+* 使用import关键字。格式：import 包名。
         1. 例子1(推荐)：import cn.itcast.student.StdentDemo
             ** 以上是类级别的导包。StdentDemo是一个具体的类名。
         2. 例子2（不推荐）: import cn.itcast.student.
-> 所有的包中的类，都加上public修饰符。如：public class A {}
+* 所有的包中的类，都加上public修饰符。如：public class A {}
 包的访问权限，可以查看权限修饰符相关内容。
-
 ------
 
 ##常用API
@@ -522,7 +522,7 @@ String s = "helloqq123456worldkh897897897897java";
 System.out.println(s.replaceAll(regex, "*"));
 // helloqq******worldkh************java
 ```
-####正则
+####正则的使用
 java.util.regex.Pattern;
 java.util.regex.Matcher;
 ```java
