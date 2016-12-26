@@ -284,11 +284,12 @@ String -> 其他类型数据：
 * String对象和StringBuffer对象的转换：
     转换的意义：前者转成后者的目的是，使用后者的功能。后者转为前者的目的是，希望返回的是前者的类型，直接可以使用。
     String => StringBuffer : 
-        ** 通过构造方法转换：new StringBuffer(xx);
-        ** 使用append()方法来转换。sb.append(xx);
+    * 通过构造方法转换：new StringBuffer(xx);
+    * 使用append()方法来转换。sb.append(xx);
+    
     StringBuffer => String : 
-        ** 通过构造方法转换：new String(yy)
-        ** 通过toString()方法来转换。
+    * 通过构造方法转换：new String(yy)
+    * 通过toString()方法来转换。
 
 ###StringBuilder
 * 它是一个非线程安全的字符串缓冲区类。在单线程中使用。效率更高。推荐在大多数应用场景中使用它。
@@ -414,11 +415,17 @@ System.out.println(System.currentTimeMillis());
 * 日期时间格式化类。它有个父类，是DateFormate类。很多方法都可以参数父类的。
 * 主要用于把Date对象转换为指定的字符串格式，或者把指定的字符串格式转换为日期。字符串 - Date，Date - 字符串。
 * 注：字符串 - Date时，字符串的格式，必须和SimpleDateFormate的构造参数的格式一致才能使用。
-* 案例：
-    Date - String：
-        ** Date d = new Date(); SimpleDateFormate sdf = new SimpleDateFormate("yyyy-MM-dd HH:mm:ss"); String s = sdf.format(d);
-    String - Date：
-        ** String str = "2015-12-25 12:25:35"; SimpleDateFormate sdf = new SimpleDateFormate("yyyy-MM-dd HH:mm:ss"); Date dd = sdf.parse(str);
+
+```java
+// 案例：
+// Date -> String：
+Date d = new Date(); 
+SimpleDateFormate sdf = new SimpleDateFormate("yyyy-MM-dd HH:mm:ss"); 
+String s = sdf.format(d);
+
+// String -> Date：
+String str = "2015-12-25 12:25:35"; SimpleDateFormate sdf = new SimpleDateFormate("yyyy-MM-dd HH:mm:ss"); Date dd = sdf.parse(str);
+```
 
 ```java
 // package java.text
@@ -439,15 +446,19 @@ System.out.println(sdf2.parse(str));
 ###Calendar
 * 该类表达日历时间。用于替代Date类使用。它是一个抽象类，不可以实例化。所有方法和属性都是静态的。
 * 注：月的值是0~11，所以月都要+1。
-* 案例1：获取当前的年：
-    Calendar nowTime = Calendar.getInstance();
-    int year = nowTime.get(Calendar.YEAR);
-* 案例2：获取任意一年的2月的天数：
-    int year = 2016;
-    Calendar c = Calendar.getInstance();
-    c.set(year, 2, 1); // 设置时间为2016年3月1日。
-    c.add(Calendar.DATE, -1); // 减去1天就是2月的最后一天。
-    System.out.println(c.get(Calendar.DATE)); // 打印这个日期就是一共有多少天
+```java
+//案例1：获取当前的年：
+Calendar nowTime = Calendar.getInstance();
+int year = nowTime.get(Calendar.YEAR);
+```
+```java
+//案例2：获取任意一年的2月的天数：
+int year = 2016;
+Calendar c = Calendar.getInstance();
+c.set(year, 2, 1); // 设置时间为2016年3月1日。
+c.add(Calendar.DATE, -1); // 减去1天就是2月的最后一天。
+System.out.println(c.get(Calendar.DATE)); // 打印这个日期就是一共有多少天
+```
 ```java 
 //package java.util.Calendar
 
