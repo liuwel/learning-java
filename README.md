@@ -82,7 +82,7 @@ long l = 33342L;
 // 给float类型赋值格式
 float f = 2.3F;
 ```
-> int类型自动装箱 byte值范围之内的对象 是被jvm缓存起来的 所以 byte范围内打封装对象是同一个
+> int类型自动装箱 byte值范围之内的对象 是被jvm缓存起来的 所以 byte范围内的封装对象是同一个
 
 ###数组
 > 数组是引用类型的，当参数传递时，传入方法的是地址。
@@ -188,26 +188,26 @@ System.out.println(Arrays.toString(c));
 > 定义在一个文件夹中的n个文件，都是不需要引入直接使用的，因为他们都在同一个包中。
 作用：对类进行管理。
 
-####包管理方案
+###包管理方案
 * 按照功能分。如：增加，删除，修改，查询分成包来管理。如：cn.itcast.add, cn.itcast.delete…
 * 按照模板分(推荐)。如：老师的功能放一个包，学生的功能放一个包。如：cn.itcast.teacher, cn.itcast.stdunt
 * 以上两种方案结合使用。先按模块分，再按功能分。
 
-####包的定义
+###包的定义
 * 使用package关键字。多级包用“.”来分开。如：cn.itcast.teacher => cn/itcast/teacher
 
-####包的注意事项
+###包的注意事项
 * package语句必须放在可执行代码的第一行。
 * 一个类中只能定义一个包名。也就是说。一个类中，只能使用一次package语句。同php的namespace一样。
 * 如果类不用package声明，则表示无包名。
 
-####导入包
+###导入包
 * 使用import关键字。格式：import 包名。
-        1. 例子1(推荐)：import cn.itcast.student.StdentDemo
-            ** 以上是类级别的导包。StdentDemo是一个具体的类名。
-        2. 例子2（不推荐）: import cn.itcast.student.
-* 所有的包中的类，都加上public修饰符。如：public class A {}
-包的访问权限，可以查看权限修饰符相关内容。
+    1. 例子1(推荐)：import cn.itcast.student.StdentDemo
+        ** 以上是类级别的导包。StdentDemo是一个具体的类名。
+    2. 例子2（不推荐）: import cn.itcast.student.
+* 所有的包中的类，都加上public修饰符。如：public class A {} 包的访问权限，可以查看权限修饰符相关内容。
+
 ------
 
 ##常用API
