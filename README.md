@@ -36,7 +36,7 @@ transient	try	void	volatile	while
 
 ##java数据类型
 ###基础数据类型
-|   类型    |   长度(字节)    |   默认值  |   默认封箱类  |
+|   类型    |   长度(字节)    |   默认值  |   默认封装类  |
 | :--------:|:---------:|:---------:|:---------:|:---------:| 
 |   byte    |   1   |   0   |java.lang.Byte|
 |   short   |   2   |   0   |java.lang.Short|
@@ -426,7 +426,9 @@ SimpleDateFormate sdf = new SimpleDateFormate("yyyy-MM-dd HH:mm:ss");
 String s = sdf.format(d);
 
 // String -> Date：
-String str = "2015-12-25 12:25:35"; SimpleDateFormate sdf = new SimpleDateFormate("yyyy-MM-dd HH:mm:ss"); Date dd = sdf.parse(str);
+String str = "2015-12-25 12:25:35"; 
+SimpleDateFormate sdf = new SimpleDateFormate("yyyy-MM-dd HH:mm:ss"); 
+Date dd = sdf.parse(str);
 ```
 
 ```java
