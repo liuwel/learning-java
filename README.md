@@ -4,6 +4,16 @@
 ##基础语法
 ###关键字
 java中所有关键字都是小写的 注意 main不是关键字
+> abstract    assert  boolean break   byte    case
+catch   char    class   const   continue    default
+do  double	else    enum	extends final	finally	float
+for	goto	if	implements	import
+instanceof	int	interface	long	native
+new	package	private	protected	public
+return	strictfp	short	static	super
+switch	synchronized	this	throw	throws
+transient	try	void	volatile	while
+
 ###命名规则
 * 由英文字母数字下划线 $符号组成
 * 不能以数字开头，也不能是关键字
