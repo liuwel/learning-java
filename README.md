@@ -189,12 +189,12 @@ System.out.println(Arrays.toString(c));
 作用：对类进行管理。
 
 ###包管理方案
-* 按照功能分。如：增加，删除，修改，查询分成包来管理。如：cn.itcast.add, cn.itcast.delete…
-* 按照模板分(推荐)。如：老师的功能放一个包，学生的功能放一个包。如：cn.itcast.teacher, cn.itcast.stdunt
+* 按照功能分。如：增加，删除，修改，查询分成包来管理。如：org.ezmind.add, org.ezmind.delete…
+* 按照模板分(推荐)。如：老师的功能放一个包，学生的功能放一个包。如：org.ezmind.liuwel, org.ezmind.utils
 * 以上两种方案结合使用。先按模块分，再按功能分。
 
 ###包的定义
-* 使用package关键字。多级包用“.”来分开。如：cn.itcast.teacher => cn/itcast/teacher
+* 使用package关键字。多级包用“.”来分开。如：org.ezmind.liuwel => org/ezmind/liuwel
 
 ###包的注意事项
 * package语句必须放在可执行代码的第一行。
