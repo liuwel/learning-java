@@ -203,9 +203,9 @@ System.out.println(Arrays.toString(c));
 
 ###导入包
 * 使用import关键字。格式：import 包名。
-    1. 例子1(推荐)：import cn.itcast.student.StdentDemo
+    1. 例子1(推荐)：import org.ezmind.student.StdentDemo
         ** 以上是类级别的导包。StdentDemo是一个具体的类名。
-    2. 例子2（不推荐）: import cn.itcast.student.
+    2. 例子2（不推荐）: import org.ezmind.student.
 * 所有的包中的类，都加上public修饰符。如：public class A {} 包的访问权限，可以查看权限修饰符相关内容。
 
 ------
