@@ -1,7 +1,7 @@
 #Learning Java
 
-##基础语法
-###关键字
+## 基础语法
+### 关键字
 java中所有关键字都是小写的 注意 main不是关键字
 > abstract    assert  boolean break   byte    case
 catch   char    class   const   continue    default
@@ -13,28 +13,28 @@ return	strictfp	short	static	super
 switch	synchronized	this	throw	throws
 transient	try	void	volatile	while
 
-###命名规则
+### 命名规则
 * 由英文字母数字下划线 $符号组成
 * 不能以数字开头，也不能是关键字
 
-###命名规范
+### 命名规范
 * 包 全小写 . 分割
 * 类和接口 大驼峰
 * 成员方法成员变量 小驼峰
 * 常量 全大写 单词之间 _ 分割如 MAX_LENGTH
 
-###数据进制的标识方式
+### 数据进制的标识方式
 * 2进制 0b开头
 * 8进制 0开头
 * 10进制 0-9 默认
 * 16进制 0x开头 0-9 a-f 组成
 
-###进制转换
+### 进制转换
 *  n进制转10进制：n进制从左到右的每一位数分别乘以n的0次，1次，2次~n次方。如：2进制1001 – 10进制的1+0+0+8 = 9
 *  10进制转换n进制：10进制数除以n进制的n，一直到商0，然后把余数倒过来。
 
-##java数据类型
-###基础数据类型
+## java数据类型
+### 基础数据类型
 |   类型    |   长度(字节)    |   默认值  |   默认封装类  |
 | :--------:|:---------:|:---------:|:---------:|:---------:| 
 |   byte    |   1   |   0   |java.lang.Byte|
@@ -45,7 +45,7 @@ transient	try	void	volatile	while
 |   double   |   8   |   0.0   |java.lang.Double|
 |   char   |   2   |   \u0000   |java.lang.Character|
 |   boolean   |   1/8   |   false   |java.lang.Boolean|
-###引用数据类型
+### 引用数据类型
 * 类 使用class 定义的类实例化对象 
 ```java
 ClassName xxx = new ClassName();
@@ -58,7 +58,7 @@ InterfaceName inter = new ClassImpl();
 ```java
 int[] i = new int[]{1,2,3};
 ```
-###类型转换
+### 类型转换
 * 默认转换(数据从小到大做类型转换)
     1. byte,short,char -> int -> long -> float -> double 
     2. 如果参与运算的有大的数据类型，结果必定是大的数据类型 如：int和double 进行运算 结果一定是double类型
@@ -83,7 +83,7 @@ float f = 2.3F;
 ```
 > int类型自动装箱 byte值范围之内的对象 是被jvm缓存起来的 所以 byte范围内的封装对象是同一个
 
-###数组
+### 数组
 > 数组是引用类型的，当参数传递时，传入方法的是地址。
 数组可以存储任何类型的数据，包括对象类型，基础类型和引用类型都可以通过数组存储，但是数组内存储的元素类型必须一致。
 数组的最大的缺点是，一旦定义，元素固定。
@@ -114,7 +114,7 @@ for(int i=0;i<arr.length;i++){
 // 6
 ```
 
-####二维数组和多维数组
+#### 二维数组和多维数组
 * 二维数组的每个元素都是一个一维数组。
 	1. 如：int[][] arr = new int[3][2];  表示这个二维数组有3个一维数组组成，每个一维数组都有2个元素。
 	2. 上例中，打印arr，arr[0] ~ arr[2]的值，都是地址值。只有arr[0][0] ~ arr[2][1] 才是真正的值。
@@ -138,7 +138,7 @@ for (int i = 0; i < testInt.length; i++) {
 	}
 }
 ```
-####数组操作的几个案例
+#### 数组操作的几个案例
 ```java
 // 数组反序
 int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -182,25 +182,25 @@ System.out.println(Arrays.toString(c));
 // [4, 6, 12, 22, 43, 56, 63, 125, 999]
 ```
 ------
-##包
+## 包
 > 包就是文件夹，一个文件夹，就是一个包。
 > 定义在一个文件夹中的n个文件，都是不需要引入直接使用的，因为他们都在同一个包中。
 作用：对类进行管理。
 
-###包管理方案
+### 包管理方案
 * 按照功能分。如：增加，删除，修改，查询分成包来管理。如：org.ezmind.add, org.ezmind.delete…
 * 按照模板分(推荐)。如：老师的功能放一个包，学生的功能放一个包。如：org.ezmind.liuwel, org.ezmind.utils
 * 以上两种方案结合使用。先按模块分，再按功能分。
 
-###包的定义
+### 包的定义
 * 使用package关键字。多级包用“.”来分开。如：org.ezmind.liuwel => org/ezmind/liuwel
 
-###包的注意事项
+### 包的注意事项
 * package语句必须放在可执行代码的第一行。
 * 一个类中只能定义一个包名。也就是说。一个类中，只能使用一次package语句。同php的namespace一样。
 * 如果类不用package声明，则表示无包名。
 
-###导入包
+### 导入包
 * 使用import关键字。格式：import 包名。
     1. 例子1(推荐)：import org.ezmind.student.StdentDemo
         ** 以上是类级别的导包。StdentDemo是一个具体的类名。
@@ -209,20 +209,20 @@ System.out.println(Arrays.toString(c));
 
 ------
 
-##常用API
-###Object
+## 常用API
+### Object
 * java中所有类的父类。包括数组在内，所有对象都继承了Object类的方法和属性。由于Object中默认是无参构造，所以所有的子类不定义构造函数时，默认都使用它的无参构造。
 * 该类的大多数方法，都可以使用编辑器来重写。
 * 常用的方法：hashCode()，getClass()，toString()，equals()，clone()。
 > 注：克隆出的2个对象的引用完全无关，都是独立的对象，互相不会影响。和a对象赋值给b对象，引用指向一个地址是2个概念。
 
-###Scanner
+### Scanner
 * 作用：是个键盘输入类。
 * 构造时的参数：一般是System.in，一个InputStream输入流对象。
 * 常用方法：hasXxx() 和 nextXxx()方法。一个是判断，一个是获取。先判断，后获取。
 >  注：该方法经常配合循环一起实用。如while (true), 可以一直处于等待输入状态，可以通过break退出输入。
 
-###System
+### System
 * 该类和系统运行相关，其中包含很多有用的方法和属性。所有成员都是静态的。
 * 常用方法和属性：in,out,exit(),currentTimeMillis()等等。
 package java.lang
@@ -257,7 +257,7 @@ System.out.println("b:"+Arrays.toString(b));
 // b:[5, 6, 3, 4]
 ```
 
-###String
+### String
 * 概念：字符串就是由多个字符组成的一串数据，可以看成一个字符数组。
 * 特点：
         所有的字面量的字符串，如："abc" 都是一个字符串对象。
@@ -279,7 +279,7 @@ String -> 其他类型数据：
 * 常用方法：查看api文档。
 * String类不仅仅有字符串的基本操作功能，还有正则的功能，如：匹配，替换，分割等。
 
-###StringBuffer
+### StringBuffer
 * 长度和内容可变的，线程安全的带缓冲区的字符串类，效率高于String类。
 * 它自带了一个可扩充的缓冲区。
 * String对象和StringBuffer对象的转换：
@@ -292,7 +292,7 @@ String -> 其他类型数据：
     * 通过构造方法转换：new String(yy)
     * 通过toString()方法来转换。
 
-###StringBuilder
+### StringBuilder
 * 它是一个非线程安全的字符串缓冲区类。在单线程中使用。效率更高。推荐在大多数应用场景中使用它。
 * 常用API： 和 StringBuffer一模一样。
 
@@ -301,7 +301,7 @@ String -> 其他类型数据：
         String类型：它是特殊的引用类型，当成参数传入方法中，并且进行操作时，和基本类型一样，不会一改全改。
         StringBuffer和StringBuilder类型：当成参数传入方法中，并进行操作时，和其他引用类型一样，一改全改。
 
-###Arrays
+### Arrays
 * 它是一个数组操作类，封装了数组的常用操作，如：排序，查找等。
 ```java
 int[] a = { 2, 3, 45, 56, 6, 1 };
@@ -318,11 +318,11 @@ System.out.println(Arrays.binarySearch(a, 45));
 // 4
 ```
 
-###Math
+### Math
 * 该类用于数学运算，提供一些数学中的常用操作。如：四舍五入，绝对值等等。
 * 案例：设置一个1~100之间的随机数。(int) (Math.random() * (end - start + 1)) + start;
 
-###Random
+### Random
 * 随机数类。但是在大多数情况下，还是Math.random更方便使用。
 ```java
 Random r = new Random();
@@ -330,7 +330,7 @@ System.out.println(r.nextInt(20));
 // 生成一个1-20之间的随机数(但不包括20)
 ```
 ------
-###BigInteger
+### BigInteger
 * 该类用于处理高精度的任意整型数的运算，无论大小。主要用于超出int范围的数值运算。
 
 ```java
@@ -367,7 +367,7 @@ System.out.println(res[1]);
 // 0
 ```
 ------
-###BigDecimal
+### BigDecimal
 *  该类用于处理高精度浮点数，弥补float和double类型的精度缺失问题，解决这些问题。
 
 精确运算 一般金融项目会用到
@@ -397,7 +397,7 @@ System.out.println(bd1.divide(bd2,2,BigDecimal.ROUND_HALF_UP));
 // 9.00
 ```
 ------
-###Date
+### Date
 * 日期处理类。精确到毫秒。推荐使用Calendar类来处理日期时间。
 * 关于Date和Sting的互相转换：使用SimpleDateFormate类。如：yy-mm-dd hh:ii:ss 这样的格式和Date对象的互转。
 ```java
@@ -412,7 +412,7 @@ System.out.println(System.currentTimeMillis());
 // 1481889794230
 ```
 ------
-###SimpleDateFormate
+### SimpleDateFormate
 * 日期时间格式化类。它有个父类，是DateFormate类。很多方法都可以参数父类的。
 * 主要用于把Date对象转换为指定的字符串格式，或者把指定的字符串格式转换为日期。字符串 - Date，Date - 字符串。
 * 注：字符串 - Date时，字符串的格式，必须和SimpleDateFormate的构造参数的格式一致才能使用。
@@ -446,7 +446,7 @@ System.out.println(sdf2.parse(str));
 // Sun Aug 08 12:12:12 CST 2010
 ```
 ------ 
-###Calendar
+### Calendar
 * 该类表达日历时间。用于替代Date类使用。它是一个抽象类，不可以实例化。所有方法和属性都是静态的。
 * 注：月的值是0~11，所以月都要+1。
 ```java
@@ -482,7 +482,7 @@ c.set(2015,2,3);
 System.out.println(c.getTime());
 ```
 ------
-###正则表达式
+### 正则表达式
 * 字符：
     \\ ： 表示反斜线,2个\表示1个\。特定情况下可以用来转义使用。如：\\d, \\.
     \n : 换行。
@@ -519,7 +519,7 @@ System.out.println(c.getTime());
     (…)\n
 
 
-####字符串匹配
+#### 字符串匹配
 String.matches(regex)
 ```java
 String regex = "1\\d{10}";
@@ -530,7 +530,7 @@ System.out.println("d@c.coma.d".matches(emailRegex));
 // true
 // true
 ```
-####字符串分割
+#### 字符串分割
 String.split(regex)
 ```java
 String regex = "\\$";
@@ -538,7 +538,7 @@ String s = "dasfasfasf$sdafas$fsdfasd$fasd$asfasd$asdaaas$d$daasfa$";
 System.out.println(Arrays.toString(s.split(regex)));
 // [dasfasfasf, sdafas, fsdfasd, fasd, asfasd, asdaaas, d, daasfa]
 ```
-####字符串替换
+#### 字符串替换
 String.replaceAll(regex,replacement)
 ```java
 String regex = "\\d";
@@ -546,7 +546,7 @@ String s = "helloqq123456worldkh897897897897java";
 System.out.println(s.replaceAll(regex, "*"));
 // helloqq******worldkh************java
 ```
-####正则的使用
+#### 正则的使用
 java.util.regex.Pattern;
 java.util.regex.Matcher;
 ```java
@@ -565,7 +565,7 @@ while (m.find()) {
 ```
 ------
 
-##java 访问权限修饰符
+## java 访问权限修饰符
 |   访问权限    |   类    |   包  |   子类  |   其他包  |
 | :--------:|:---------:|:---------:|:---------:|:---------:| 
 | public    |   Y   |   Y   |   Y   |   Y   |
