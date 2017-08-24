@@ -36,7 +36,7 @@ transient	try	void	volatile	while
 ## java数据类型
 ### 基础数据类型
 |   类型    |   长度(字节)    |   默认值  |   默认封装类  |
-| :--------:|:---------:|:---------:|:---------:|:---------:| 
+| :--------:|:---------:|:---------:|:---------:|
 |   byte    |   1   |   0   |   java.lang.Byte    |
 |   short   |   2   |   0   |    java.lang.Short    |
 |   int     |   4   |   0   |    java.lang.Integer    |
