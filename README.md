@@ -37,14 +37,14 @@ transient	try	void	volatile	while
 ### 基础数据类型
 |   类型    |   长度(字节)    |   默认值  |   默认封装类  |
 | :--------:|:---------:|:---------:|:---------:|:---------:| 
-|   byte    |   1   |   0   |java.lang.Byte|
-|   short   |   2   |   0   |java.lang.Short|
-|   int     |   4   |   0   |java.lang.Integer|
-|   long    |   8   |   0   |java.lang.Long|
-|   float   |   4   |   0.0   |java.lang.Float|
-|   double   |   8   |   0.0   |java.lang.Double|
-|   char   |   2   |   \u0000   |java.lang.Character|
-|   boolean   |   1/8   |   false   |java.lang.Boolean|
+|   byte    |   1   |   0   |   java.lang.Byte    |
+|   short   |   2   |   0   |    java.lang.Short    |
+|   int     |   4   |   0   |    java.lang.Integer    |
+|   long    |   8   |   0   |    java.lang.Long    |
+|   float   |   4   |   0.0   |    java.lang.Float   |
+|   double   |   8   |   0.0   |    java.lang.Double    |
+|   char   |   2   |   \u0000   |    java.lang.Character    |
+|   boolean   |   1/8   |   false   |    java.lang.Boolean    |
 ### 引用数据类型
 * 类 使用class 定义的类实例化对象 
 ```java
